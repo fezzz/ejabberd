@@ -24,9 +24,4 @@ RUN cd /tmp/ejabberd-18.01; ./configure  --disable-graphics --enable-user=ejabbe
 RUN cd /tmp/ejabberd-18.01; make
 RUN cd /tmp/ejabberd-18.01; make install
 
-RUN chown -R ejabberd:ejabberd /var/lib/ejabberd
-RUN chown -R ejabberd:ejabberd /etc/ejabberd
-RUN chown -R ejabberd:ejabberd /var/log/ejabberd
-
-#USER [ejabberd]
 CMD ["/usr/local/sbin/ejabberdctl","foreground"]
