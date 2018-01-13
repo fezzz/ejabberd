@@ -1,7 +1,7 @@
 # Set the base image
 FROM centos
 # Dockerfile author / maintainer
-MAINTAINER Felix Stellmacher <felix@stellmacher.name>
+MAINTAINER Felix Stellmacher <docker@istsotoll.de>
 
 EXPOSE 5222
 EXPOSE 5269
