@@ -6,7 +6,7 @@ MAINTAINER Felix Stellmacher <felix@stellmacher.name>
 EXPOSE 5222
 EXPOSE 5269
 
-RUN groupadd -r ejabberd && useradd -r -g ejabberd ejabberd
+RUN groupadd -r ejabberd && useradd -r -g -m ejabberd ejabberd
 
 RUN yum update -y
 RUN yum install epel-release -y
