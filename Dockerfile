@@ -24,4 +24,4 @@ RUN cd /tmp/ejabberd-18.01; ./configure  --disable-graphics --enable-user=ejabbe
 RUN cd /tmp/ejabberd-18.01; make
 RUN cd /tmp/ejabberd-18.01; make install
 
-CMD ["/usr/local/sbin/ejabberdctl","foreground","|", "tee","/var/log/ejabberd/ejabberd.log"]
+CMD ["/usr/local/sbin/ejabberdctl","foreground"]
