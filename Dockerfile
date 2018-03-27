@@ -16,8 +16,7 @@ RUN yum groupinstall -y 'Development Tools'
 RUN cd /tmp; wget -O es.rpm https://packages.erlang-solutions.com/erlang-solutions-1.0-1.noarch.rpm
 RUN cd /tmp; rpm -Uvh es.rpm
 RUN yum install -y esl-erlang
-
-RUN cd /tmp; wget -O ejabberd.tgz https://www.process-one.net/downloads/downloads-action.php?file=/ejabberd/18.01/ejabberd-18.01.tgz
+RUN cd /tmp; wget -O ejabberd.tgz https://www.process-one.net/downloads/downloads-action.php?file=/ejabberd/18.03/ejabberd-18.03.tgz
 RUN cd /tmp; tar -xf ejabberd.tgz
 
 RUN cd /tmp/ejabberd-18.01; ./configure  --disable-graphics --enable-user=ejabberd --enable-mysql --enable-pam --enable-zlib
