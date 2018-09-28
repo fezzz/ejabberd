@@ -17,11 +17,11 @@ RUN cd /tmp; wget -O es.rpm https://packages.erlang-solutions.com/erlang-solutio
 RUN cd /tmp; rpm -Uvh es.rpm
 RUN yum install -y esl-erlang
 
-RUN cd /tmp; wget -O ejabberd.tgz https://www.process-one.net/downloads/downloads-action.php?file=/ejabberd/18.06/ejabberd-18.06.tgz
+RUN cd /tmp; wget -O ejabberd.tgz https://www.process-one.net/downloads/downloads-action.php?file=/ejabberd/18.09/ejabberd-18.09.tgz
 RUN cd /tmp; tar -xf ejabberd.tgz
 
-RUN cd /tmp/ejabberd-18.06; ./configure  --disable-graphics --enable-user=ejabberd --enable-mysql --enable-pam --enable-zlib
-RUN cd /tmp/ejabberd-18.06; make
-RUN cd /tmp/ejabberd-18.06; make install
+RUN cd /tmp/ejabberd-18.09; ./configure  --disable-graphics --enable-user=ejabberd --enable-mysql --enable-pam --enable-zlib
+RUN cd /tmp/ejabberd-18.09; make
+RUN cd /tmp/ejabberd-18.09; make install
 
 CMD ["/usr/local/sbin/ejabberdctl","foreground"]
