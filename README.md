@@ -1,4 +1,4 @@
-# ejabberd 18.09
+# ejabberd 18.12
 This image built on centos contains the latest ejabberd version compiled from the sources.
 In order to use it properly, you have to mount some directories from your host. (configuration files, databases, logs)
 **Make sure that you set on the host the user and group for the directories to mount correctly. User 999 Group 998**
